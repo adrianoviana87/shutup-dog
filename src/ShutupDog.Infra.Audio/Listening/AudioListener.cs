@@ -6,11 +6,11 @@ namespace ShutupDog.Infra.Audio.Listening
 {
     public class AudioListener : IAudioListener
     {
-        private WaveIn m_source;
+        private WaveInEvent m_source;
 
         public AudioListener()
         {
-            m_source = new WaveIn();
+            m_source = new WaveInEvent();
             m_source.DeviceNumber = 0;
             m_source.WaveFormat = new WaveFormat();
             m_source.DataAvailable += SourceStreamDataAvailable;
@@ -40,9 +40,25 @@ namespace ShutupDog.Infra.Audio.Listening
             }
         }
 
+        protected void OnThresholdReached(double decibel)
+        {
+            ThresholdReached?.Invoke(this, new ThresholdReachedEventArgs(decibel));
+        }
+
         private void SourceStreamDataAvailable(object sender, WaveInEventArgs e)
         {
-            
+            double sum = 0;
+            for (var i = 0; i < e.BytesRecorded; i = i + 2)
+            {
+                double sample = BitConverter.ToInt16(e.Buffer, i) / 32768.0;
+                sum += (sample * sample);
+            }
+            double rms = Math.Sqrt(sum / (e.BytesRecorded / 2));
+            var decibel = 20 * Math.Log10(rms);
+            if (decibel >= Threshold)
+            {
+                OnThresholdReached(decibel);
+            }
         }
     }
 }

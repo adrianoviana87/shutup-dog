@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Listening\AudioListener.cs" />
+    <Compile Include="Playing\AudioPlayback.cs" />
+    <Compile Include="Playing\AudioPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

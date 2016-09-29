@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutupDog.Domain", "ShutupD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutupDog.Infra.Audio", "ShutupDog.Infra.Audio\ShutupDog.Infra.Audio.csproj", "{16A48593-F67C-4A5E-B0AD-F1830C91F2E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutupDog.Infra.Files", "ShutupDog.Infra.Files\ShutupDog.Infra.Files.csproj", "{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutupDog.Infra", "ShutupDog.Infra\ShutupDog.Infra.csproj", "{027C420C-051D-4110-99D3-5381197CF310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutupDog.ConsoleApp", "ShutupDog.ConsoleApp\ShutupDog.ConsoleApp.csproj", "{B3188848-23CF-4DB9-9021-857E99C9B6D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{16A48593-F67C-4A5E-B0AD-F1830C91F2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16A48593-F67C-4A5E-B0AD-F1830C91F2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16A48593-F67C-4A5E-B0AD-F1830C91F2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027C420C-051D-4110-99D3-5381197CF310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027C420C-051D-4110-99D3-5381197CF310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027C420C-051D-4110-99D3-5381197CF310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027C420C-051D-4110-99D3-5381197CF310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3188848-23CF-4DB9-9021-857E99C9B6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3188848-23CF-4DB9-9021-857E99C9B6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3188848-23CF-4DB9-9021-857E99C9B6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3188848-23CF-4DB9-9021-857E99C9B6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

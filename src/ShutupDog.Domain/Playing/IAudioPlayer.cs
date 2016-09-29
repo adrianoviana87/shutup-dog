@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace ShutupDog.Domain.Playing
+﻿namespace ShutupDog.Domain.Playing
 {
-    public interface IAudioPlayer : IDisposable
+    public interface IAudioPlayer
     {
         IAudioPlayback PlayRandomAudio();
     }

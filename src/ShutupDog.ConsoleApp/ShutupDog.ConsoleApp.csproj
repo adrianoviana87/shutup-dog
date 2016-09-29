@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13235637-6D61-4F98-9F4A-0EC921B256D8}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{B3188848-23CF-4DB9-9021-857E99C9B6D0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShutupDog.Domain</RootNamespace>
-    <AssemblyName>ShutupDog.Domain</AssemblyName>
+    <RootNamespace>ShutupDog.ConsoleApp</RootNamespace>
+    <AssemblyName>ShutupDog.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,14 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlertService.cs" />
-    <Compile Include="IAlertService.cs" />
-    <Compile Include="Listening\IAudioListener.cs" />
-    <Compile Include="Playing\IAudioFileRepository.cs" />
-    <Compile Include="Playing\IAudioPlayback.cs" />
-    <Compile Include="Playing\IAudioPlayer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Listening\ThresholdReachedEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShutupDog.Domain\ShutupDog.Domain.csproj">
+      <Project>{13235637-6d61-4f98-9f4a-0ec921b256d8}</Project>
+      <Name>ShutupDog.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShutupDog.Infra.Audio\ShutupDog.Infra.Audio.csproj">
+      <Project>{16a48593-f67c-4a5e-b0ad-f1830c91f2e0}</Project>
+      <Name>ShutupDog.Infra.Audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShutupDog.Infra.Files\ShutupDog.Infra.Files.csproj">
+      <Project>{e09ee5f1-8401-4d7d-8f1d-c5d39f7b0c19}</Project>
+      <Name>ShutupDog.Infra.Files</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShutupDog.Infra\ShutupDog.Infra.csproj">
+      <Project>{027c420c-051d-4110-99d3-5381197cf310}</Project>
+      <Name>ShutupDog.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

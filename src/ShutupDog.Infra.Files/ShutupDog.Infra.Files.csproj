@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13235637-6D61-4F98-9F4A-0EC921B256D8}</ProjectGuid>
+    <ProjectGuid>{E09EE5F1-8401-4D7D-8F1D-C5D39F7B0C19}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShutupDog.Domain</RootNamespace>
-    <AssemblyName>ShutupDog.Domain</AssemblyName>
+    <RootNamespace>ShutupDog.Infra.Files</RootNamespace>
+    <AssemblyName>ShutupDog.Infra.Files</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlertService.cs" />
-    <Compile Include="IAlertService.cs" />
-    <Compile Include="Listening\IAudioListener.cs" />
-    <Compile Include="Playing\IAudioFileRepository.cs" />
-    <Compile Include="Playing\IAudioPlayback.cs" />
-    <Compile Include="Playing\IAudioPlayer.cs" />
+    <Compile Include="AudioFileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Listening\ThresholdReachedEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShutupDog.Domain\ShutupDog.Domain.csproj">
+      <Project>{13235637-6d61-4f98-9f4a-0ec921b256d8}</Project>
+      <Name>ShutupDog.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

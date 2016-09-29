@@ -2,7 +2,7 @@
 
 namespace ShutupDog.Domain.Playing
 {
-    public interface IAudioPlayback
+    public interface IAudioPlayback : IDisposable
     {
         DateTime? FinishedAt { get; }        
     }
